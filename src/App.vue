@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+      <div id="progress-bar"></div>
+      <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <router-link :to="{name: 'Home'}" class="nav-link">
+                      Home
+                  </router-link>
+              </li>
+              <li class="nav-item">
+                  <router-link :to="{name: 'About'}" class="nav-link">
+                      About
+                  </router-link>
+              </li>
+              <li class="nav-item">
+                  <router-link :to="{name: 'Contact'}" class="nav-link">
+                      Contact
+                  </router-link>
+              </li>
+          </ul>
+      </nav>
+      <div class="content mt-3">
+          <router-view/>
+      </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #progress-bar {
+        height: 10px;
+        margin-top: 10px;
+    }
 </style>
